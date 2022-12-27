@@ -271,7 +271,7 @@ COPY --from=rabbitmq /opt/rabbitmq/ /opt/rabbitmq/
 # end rabbitmq #
 
 # temp fix until s6 services have been migrated to s6-rc
-RUN sed -i '/sh -e/a \\export S6_CMD_WAIT_FOR_SERVICES_MAXTIME=0' /init
+RUN sed -i '/sh -e/a \\export S6_CMD_WAIT_FOR_SERVICES_MAXTIME=0' #/init
 
 WORKDIR /home/app/unms
 
