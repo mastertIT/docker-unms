@@ -19,6 +19,6 @@ jobs:
         run: |
           docker buildx build \
             --platform linux/amd64,linux/arm64,linux/arm/v7 \
-            -t nico640/docker-unms:latest -f Dockerfile \
+            -t masteritt/unms-s6:tagname -f Dockerfile \
             --push --cache-from type=local,src=/tmp/buildx-cache \
             --cache-to type=local,dest=/tmp/buildx-cache .
